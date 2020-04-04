@@ -1,5 +1,9 @@
 package factory_pattern;
 
+import factory_pattern.employees.BusinessAnalyst;
+import factory_pattern.employees.QAEngineer;
+import factory_pattern.employees.SoftwareEngineer;
+
 public class EmployeeFactory {
     public static Employee getEmployee(String employeeType){
         Employee employee;

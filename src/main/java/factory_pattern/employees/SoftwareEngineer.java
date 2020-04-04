@@ -1,11 +1,13 @@
-package factory_pattern;
+package factory_pattern.employees;
 
-public class QAEngineer implements Employee{
+import factory_pattern.Employee;
+
+public class SoftwareEngineer implements Employee {
     private int age;
     private String name;
     private double salary;
 
-    public QAEngineer(int age, String name, double salary) {
+    public SoftwareEngineer(int age, String name, double salary) {
         this.age = age;
         this.name = name;
         this.salary = salary;
