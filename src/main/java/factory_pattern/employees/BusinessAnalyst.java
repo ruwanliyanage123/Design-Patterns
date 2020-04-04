@@ -1,6 +1,8 @@
-package factory_pattern;
+package factory_pattern.employees;
 
-public class BusinessAnalyst implements Employee{
+import factory_pattern.Employee;
+
+public class BusinessAnalyst implements Employee {
     private int age;
     private String name;
     private double salary;
