@@ -1,6 +1,6 @@
-package factory_pattern.employees;
+package factory_pattern.employees_concrete;
 
-import factory_pattern.Employee;
+import factory_pattern.employees_interface.Employee;
 
 public class SoftwareEngineer implements Employee {
     private int age;

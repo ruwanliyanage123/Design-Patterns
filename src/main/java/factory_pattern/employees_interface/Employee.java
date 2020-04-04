@@ -1,4 +1,4 @@
-package factory_pattern;
+package factory_pattern.employees_interface;
 
 public interface Employee {
     public static final String SOFTWARE_ENGINEER = "SoftwareEngineer";
