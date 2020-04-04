@@ -4,9 +4,10 @@ import factory_pattern.employees_interface.Employee;
 import factory_pattern.employees_concrete.BusinessAnalyst;
 import factory_pattern.employees_concrete.QAEngineer;
 import factory_pattern.employees_concrete.SoftwareEngineer;
+import factory_pattern.exceptions.EmployeeTypeNotFoundException;
 
 public class EmployeeFactory {
-    public static Employee getEmployee(String employeeType){
+    public static Employee getEmployee(String employeeType) throws EmployeeTypeNotFoundException{
         Employee employee;
         switch (employeeType){
             case Employee.SOFTWARE_ENGINEER:
@@ -19,7 +20,7 @@ public class EmployeeFactory {
                 employee = new QAEngineer(23,"Dasun",125000);
                 break;
             default:
-                throw new IllegalArgumentException();
+                throw new EmployeeTypeNotFoundException("Wrong employee type. please check correct one");
         }
         return employee;
     }
