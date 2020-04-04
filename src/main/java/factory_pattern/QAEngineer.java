@@ -1,11 +1,11 @@
 package factory_pattern;
 
-public class BusinessAnalyst implements Employee{
+public class QAEngineer implements Employee{
     private int age;
     private String name;
     private double salary;
 
-    public BusinessAnalyst(int age, String name, double salary) {
+    public QAEngineer(int age, String name, double salary) {
         this.age = age;
         this.name = name;
         this.salary = salary;
