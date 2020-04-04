@@ -1,8 +1,9 @@
-package factory_pattern;
+package factory_pattern.factory;
 
-import factory_pattern.employees.BusinessAnalyst;
-import factory_pattern.employees.QAEngineer;
-import factory_pattern.employees.SoftwareEngineer;
+import factory_pattern.employees_interface.Employee;
+import factory_pattern.employees_concrete.BusinessAnalyst;
+import factory_pattern.employees_concrete.QAEngineer;
+import factory_pattern.employees_concrete.SoftwareEngineer;
 
 public class EmployeeFactory {
     public static Employee getEmployee(String employeeType){
