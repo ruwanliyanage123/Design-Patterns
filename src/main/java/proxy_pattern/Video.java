@@ -7,3 +7,4 @@ package proxy_pattern;
 public interface Video {
     public void display(String path);
 }
+
