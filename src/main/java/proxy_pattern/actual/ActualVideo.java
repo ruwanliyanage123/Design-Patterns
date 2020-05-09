@@ -1,4 +1,6 @@
-package proxy_pattern;
+package proxy_pattern.actual;
+
+import proxy_pattern.common.Video;
 
 public class ActualVideo implements Video {
     private String path;
@@ -10,26 +12,22 @@ public class ActualVideo implements Video {
      */
     public ActualVideo(String path) {
         this.path = path;
-        this.downLoadVideo(path);
+        this.downLoadVideo();
     }
 
     /**
      * This method used to download video from the server
      * In here proxy server will contain the video
-     *
-     * @param path Url to the video
      */
-    public void downLoadVideo(String path) {
+    public void downLoadVideo() {
         System.out.println("Downloading..." + path);
     }
 
     /**
      * Will display the video
-     *
-     * @param path Url to the video
      */
     @Override
-    public void display(String path) {
+    public void display() {
         System.out.println("This is the video from real server" + path);
     }
 }
