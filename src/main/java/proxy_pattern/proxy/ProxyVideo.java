@@ -1,4 +1,7 @@
-package proxy_pattern;
+package proxy_pattern.proxy;
+
+import proxy_pattern.actual.ActualVideo;
+import proxy_pattern.common.Video;
 
 public class ProxyVideo implements Video {
     private String path;
@@ -6,21 +9,18 @@ public class ProxyVideo implements Video {
 
     public ProxyVideo(String path) {
         this.path = path;
-        this.display(path);
     }
 
     /**
      * This method first will check about if there have actual video
      * if not that, will take video from actual server to proxy server
      * and display it.
-     *
-     * @param path Url to the video
      */
     @Override
-    public void display(String path) {
+    public void display() {
         if (actualVideo == null) {
             actualVideo = new ActualVideo(path);
-            actualVideo.display(path);
+            actualVideo.display();
         } else {
             System.out.println("This is the video from proxy server" + path);
         }
